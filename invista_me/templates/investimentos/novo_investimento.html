@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'investimentos/base.html' %}
+{% block conteudo %}
+{% load crispy_forms_tags %}
+<div class="container">
+    <h1>Formulário Novo Investimento</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{formulario | crispy}}
+        <button type="submit" class="btn btn-success">Salvar</button>
+    </form>
+</div>
+
+{% endblock %}
+</body>
+</html>
