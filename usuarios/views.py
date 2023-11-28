@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import UserRegisterForm
 # Create your views here.
 
+
 # POST
 def novo_usuario(request):
     # cria um formulário que já vem pronto no DJANGO

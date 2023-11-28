@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from .models import Investimento
 from .forms import InvestimentoForm
-from django.contrib.auth.decorators import login_required # para a pessoa precisar fazer login
+from django.contrib.auth.decorators import login_required  # para a pessoa precisar fazer login
 
 # Create your views here.
 
@@ -9,24 +9,29 @@ from django.contrib.auth.decorators import login_required # para a pessoa precis
 def pagina_inicial(request):
     return HttpResponse('Pronto para investir!')'''
 
-
 '''def contato(request):
     return HttpResponse('Para dúvidas, enviar um e-mail para: contato@suporte.com')
 
+'''
+
 
 def minha_historia(request):
-    pessoa = {
-        'nome': 'Jeff',
-        'idade': '28',
-        'hobby': 'Games'
-    }
-    return render(request, 'investimentos/minha_historia.html', pessoa)
-'''
+    pessoas = [
+        {
+            'nome': 'Jeff',
+            'idade': '28',
+            'hobby': 'Games'
+        }, {
+            'nome': 'Mark',
+            'idade': '21',
+            'hobby': 'Series'
+        }
+    ]
+    return render(request, 'investimentos/minha_historia.html', {'pessoas': pessoas})
 
 
 '''def novo_investimento(request):
     return render(request, 'investimentos/novo_investimento.html')'''
-
 
 '''def investimento_registrado(request):
     investimento = {
