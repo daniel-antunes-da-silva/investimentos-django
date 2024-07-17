@@ -30,14 +30,14 @@ def minha_historia(request):
     return render(request, 'investimentos/minha_historia.html', {'pessoas': pessoas})
 
 
-'''def novo_investimento(request):
-    return render(request, 'investimentos/novo_investimento.html')'''
+def novo_investimento2(request):
+    return render(request, 'investimentos/novo_investimento2.html')
 
-'''def investimento_registrado(request):
+def investimento_registrado(request):
     investimento = {
         'tipo_investimento': request.POST.get('TipoInvestimento')
     }
-    return render(request, 'investimentos/investimento_registrado.html', investimento)'''
+    return render(request, 'investimentos/investimento_registrado.html', investimento)
 
 
 def investimentos(request):

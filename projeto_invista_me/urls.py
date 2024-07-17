@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('minha_historia/', views.minha_historia, name='minha_historia'),
     path('conta/', usuario_views.novo_usuario, name='novo_usuario'),
+    path('novo_investimento2/', views.novo_investimento2, name='novo_investimento2'),
+    path('investimento_registrado/', views.investimento_registrado, name='investimento_registrado'),
     path('login/', auth_views.LoginView.as_view(template_name='usuarios/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='usuarios/logout.html'), name='logout'),
     path('', views.investimentos, name='investimentos'),
